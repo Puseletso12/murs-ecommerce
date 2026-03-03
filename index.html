@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MURS - Contemporary Luxury</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav">
+      <a class="nav-logo" href="#" onclick="showPage('home')">MURS</a>
+      <ul class="nav-links">
+        <li>
+          <a href="#" id="nav-home" class="active" onclick="showPage('home')"
+            >HOME</a
+          >
+        </li>
+        <li>
+          <a href="#" id="nav-collections" onclick="showPage('collections')"
+            >COLLECTIONS</a
+          >
+        </li>
+        <li>
+          <a href="#" id="nav-about" onclick="showPage('about')">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="nav-contact" onclick="showPage('contact')">CONTACT</a>
+        </li>
+      </ul>
+      <button class="nav-bag" onclick="openBag()">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        <span class="bag-count" id="bag-count">0</span>
+      </button>
+    </nav>
+
+    <!-- HOME PAGE -->
+<div id="page-home" class="page active">
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-left"></div>
+    <div class="hero-bg-right"></div>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">MURS</h1>
+    <p class="hero-subtitle">Contemporary luxury. Timeless design.</p>
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+  <section class="new-arrivals">
+    <h2 class="section-title">NEW ARRIVALS</h2>
+    <p class="section-subtitle">Discover the latest additions to our collection. Each piece embodies the essence of modern luxury.</p>
+    <div class="products-grid" id="home-products"></div>
+    <div class="view-all-wrap">
+      <a href="#" class="view-all-btn" onclick="showPage('collections')">VIEW ALL COLLECTIONS &nbsp;→</a>
+    </div>
+  </section>
+
+  <section class="manifesto">
+    <p class="manifesto-label">The House of MURS</p>
+    <h2 class="manifesto-title">DEFINING<br>MODERN<br>ELEGANCE</h2>
+    <p class="manifesto-body">MURS represents the intersection of architectural precision and sartorial excellence. Our collections are crafted for those who understand that true luxury lies in restraint.</p>
+    <a href="#" class="manifesto-cta" onclick="showPage('about')">DISCOVER OUR STORY &nbsp;›</a>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">MURS</div>
+        <p class="footer-brand-desc">Contemporary luxury fashion. Timeless design meets modern elegance.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('collections')">Collections</a></li>
+          <li><a href="#" onclick="showPage('about')">About</a></li>
+          <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Follow</p>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Pinterest</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 MURS. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</div>
+  </body>
+</html>
