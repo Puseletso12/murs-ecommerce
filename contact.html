@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MURS — Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Contact page specific styles */
+    .contact-hero {
+      padding: calc(var(--nav-height) + 60px) 40px 0;
+    }
+    .contact-hero-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 16px;
+    }
+    .contact-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(60px, 11vw, 130px);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 32px;
+    }
+    .contact-hero-desc {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--mid-gray);
+      max-width: 500px;
+      line-height: 1.7;
+      margin-bottom: 60px;
+    }
+    .contact-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--black);
+      margin-bottom: 60px;
+    }
+    .contact-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      padding: 0 40px 100px;
+    }
+    .contact-form-section-title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 40px;
+    }
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    .contact-form-full {
+      margin-bottom: 24px;
+    }
+    .contact-field-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .contact-input {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--black);
+      background: none;
+      border: 1px solid var(--light-gray);
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .contact-input:focus {
+      border-color: var(--black);
+    }
+    .contact-select {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--mid-gray);
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      padding: 12px 14px;
+      outline: none;
+      cursor: pointer;
+      appearance: auto;
+      transition: border-color var(--transition);
+    }
+    .contact-select:focus {
+      border-color: var(--black);
+    }
+    .contact-textarea {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--black);
+      background: none;
+      border: 1px solid var(--light-gray);
+      padding: 12px 14px;
+      outline: none;
+      resize: none;
+      height: 180px;
+      transition: border-color var(--transition);
+    }
+    .contact-textarea:focus {
+      border-color: var(--black);
+    }
+    .contact-submit {
+      margin-top: 8px;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--black);
+      padding: 18px 48px;
+      border: none;
+      cursor: pointer;
+      transition: opacity var(--transition);
+    }
+    .contact-submit:hover { opacity: 0.7; }
+
+    /* Right column — info */
+    .contact-info-section-title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 40px;
+    }
+    .contact-info-block {
+      margin-bottom: 32px;
+    }
+    .contact-info-block-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 8px;
+    }
+    .contact-info-block-value {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--black);
+    }
+    .contact-info-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--light-gray);
+      margin: 36px 0;
+    }
+    .contact-social-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 16px;
+    }
+    .contact-social-links {
+      display: flex;
+      gap: 24px;
+    }
+    .contact-social-links a {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--black);
+      transition: opacity var(--transition);
+    }
+    .contact-social-links a:hover { opacity: 0.45; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">MURS</a>
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="collections.html">COLLECTIONS</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="contact.html" class="active">CONTACT</a></li>
+  </ul>
+  <button class="nav-bag">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 01-8 0"/>
+    </svg>
+    <span class="bag-count" id="bag-count">0</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div class="contact-hero">
+  <p class="contact-hero-label">Contact</p>
+  <h1 class="contact-hero-title">GET IN<br>TOUCH</h1>
+  <p class="contact-hero-desc">We welcome your inquiries. Our team is available to assist with orders, appointments, and general questions.</p>
+  <div class="contact-divider"></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="contact-main">
+
+  <!-- LEFT: Form -->
+  <div>
+    <h2 class="contact-form-section-title">SEND A MESSAGE</h2>
+    <form onsubmit="handleSubmit(event)">
+      <div class="contact-form-grid">
+        <div>
+          <label class="contact-field-label">Name</label>
+          <input type="text" class="contact-input" placeholder="" />
+        </div>
+        <div>
+          <label class="contact-field-label">Email</label>
+          <input type="email" class="contact-input" placeholder="" />
+        </div>
+      </div>
+      <div class="contact-form-full">
+        <label class="contact-field-label">Subject</label>
+        <select class="contact-select">
+          <option value="" disabled selected>Select a subject</option>
+          <option>General Inquiry</option>
+          <option>Order Support</option>
+          <option>Press & Media</option>
+          <option>Appointments</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="contact-form-full">
+        <label class="contact-field-label">Message</label>
+        <textarea class="contact-textarea"></textarea>
+      </div>
+      <button type="submit" class="contact-submit">SEND MESSAGE</button>
+    </form>
+  </div>
+
+  <!-- RIGHT: Info -->
+  <div>
+    <h2 class="contact-info-section-title">CONTACT INFO</h2>
+
+    <div class="contact-info-block">
+      <p class="contact-info-block-label">General Inquiries</p>
+      <p class="contact-info-block-value">contact@murs.com</p>
+    </div>
+    <div class="contact-info-block">
+      <p class="contact-info-block-label">Press & Media</p>
+      <p class="contact-info-block-value">press@murs.com</p>
+    </div>
+    <div class="contact-info-block">
+      <p class="contact-info-block-label">Customer Care</p>
+      <p class="contact-info-block-value">+33 1 42 65 00 00</p>
+    </div>
+
+    <div class="contact-info-divider"></div>
+
+    <p class="contact-social-label">Follow Us</p>
+    <div class="contact-social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">MURS</div>
+      <p class="footer-brand-desc">Contemporary luxury fashion. Timeless design meets modern elegance.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Navigation</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Follow</p>
+      <ul class="footer-links">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Pinterest</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2024 MURS. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert('Thank you for your message. We will be in touch shortly.');
+    e.target.reset();
+  }
+</script>
+
+</body>
+</html>

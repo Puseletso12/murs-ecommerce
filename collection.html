@@ -1,0 +1,182 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections — MURS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">MURS</a>
+      <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="collections.html" class="active">COLLECTIONS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <button class="nav-cart" id="cartBtn" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-hero-label">2025 SEASON</span>
+      <h1 class="page-hero-title">Collections</h1>
+      <div class="page-hero-divider"></div>
+      <p class="page-hero-desc">Each piece is a meditation on restraint and power.<br>Designed for those who speak through silence.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="collections-filter">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="coats">OUTERWEAR</button>
+      <button class="filter-btn" data-filter="dresses">DRESSES</button>
+      <button class="filter-btn" data-filter="separates">SEPARATES</button>
+    </div>
+
+    <div class="products-grid collections-grid">
+      <div class="product-card" data-category="coats">
+        <div class="product-img-wrap">
+          <img src="product-1.jpg" alt="MURS Structured Coat" />
+          <div class="product-overlay">
+            <button class="btn-add-cart" onclick="addToCart(1,'MURS Structured Coat',4200)">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">MURS Structured Coat</h3>
+          <p class="product-price">R 4,200</p>
+        </div>
+      </div>
+      <div class="product-card" data-category="separates">
+        <div class="product-img-wrap">
+          <img src="product-2.jpg" alt="Obsidian Blazer" />
+          <div class="product-overlay">
+            <button class="btn-add-cart" onclick="addToCart(2,'Obsidian Blazer',3600)">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Obsidian Blazer</h3>
+          <p class="product-price">R 3,600</p>
+        </div>
+      </div>
+      <div class="product-card" data-category="dresses">
+        <div class="product-img-wrap">
+          <img src="product-3.jpg" alt="Noir Draped Dress" />
+          <div class="product-overlay">
+            <button class="btn-add-cart" onclick="addToCart(3,'Noir Draped Dress',5100)">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Noir Draped Dress</h3>
+          <p class="product-price">R 5,100</p>
+        </div>
+      </div>
+      <div class="product-card" data-category="separates">
+        <div class="product-img-wrap">
+          <img src="product-4.jpg" alt="Slate Column Trousers" />
+          <div class="product-overlay">
+            <button class="btn-add-cart" onclick="addToCart(4,'Slate Column Trousers',2800)">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Slate Column Trousers</h3>
+          <p class="product-price">R 2,800</p>
+        </div>
+      </div>
+      <div class="product-card" data-category="coats">
+        <div class="product-img-wrap">
+          <img src="img1.jpg" alt="Charcoal Wrap Coat" />
+          <div class="product-overlay">
+            <button class="btn-add-cart" onclick="addToCart(5,'Charcoal Wrap Coat',6800)">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Charcoal Wrap Coat</h3>
+          <p class="product-price">R 6,800</p>
+        </div>
+      </div>
+      <div class="product-card" data-category="dresses">
+        <div class="product-img-wrap">
+          <img src="img2.jpg" alt="Ivory Column Gown" />
+          <div class="product-overlay">
+            <button class="btn-add-cart" onclick="addToCart(6,'Ivory Column Gown',7200)">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Ivory Column Gown</h3>
+          <p class="product-price">R 7,200</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">MURS</span>
+        <p>Luxury fashion, redefined.<br>Johannesburg · Paris · New York</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>contact@murs.com</p>
+        <p>+33 1 42 65 00 00</p>
+        <div class="footer-social">
+          <a href="#">IG</a><a href="#">TW</a><a href="#">PI</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MURS. All rights reserved.</p></div>
+  </footer>
+
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>YOUR CART</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>TOTAL</span>
+        <span id="cartTotal">R 0</span>
+      </div>
+      <a href="checkout.html" class="btn-primary" style="display:block;text-align:center;margin-top:1rem;">CHECKOUT</a>
+    </div>
+  </div>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.product-card[data-category]').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

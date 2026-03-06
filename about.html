@@ -1,0 +1,136 @@
+About · HTML
+Copy
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — MURS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">MURS</a>
+      <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="collections.html">COLLECTIONS</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <button class="nav-cart" id="cartBtn" aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <span class="page-hero-label">OUR STORY</span>
+      <h1 class="page-hero-title">About MURS</h1>
+      <div class="page-hero-divider"></div>
+      <p class="page-hero-desc">Born from the tension between African elegance and European precision.</p>
+    </div>
+  </section>
+
+  <section class="section about-section">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-label">THE VISION</span>
+        <h2 class="about-heading">Silence as a Statement</h2>
+        <p>MURS was founded on a single principle: that true luxury needs no announcement. In a world of noise, we craft garments that speak in whispers — precise, deliberate, unforgettable.</p>
+        <p>Each piece is designed to outlive seasons, trends, and time. Our fabrics are sourced from the finest mills in Europe and Japan. Our silhouettes are drawn from architecture as much as fashion.</p>
+        <p>We are for the person who has arrived — and dresses like it.</p>
+      </div>
+      <div class="about-image">
+        <img src="assets/IMG_5207.jpeg" alt="MURS Atelier" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section values-section">
+    <div class="section-header">
+      <span class="section-label">WHAT WE STAND FOR</span>
+      <h2 class="section-title">Our Values</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-item">
+        <h3>CRAFT</h3>
+        <p>Every seam, every drape, every button — considered with the same gravity as architecture. We do not cut corners. We cut fabric.</p>
+      </div>
+      <div class="value-item">
+        <h3>RESTRAINT</h3>
+        <p>Luxury is knowing what to leave out. Our designers are trained to subtract before they add. The result is power through absence.</p>
+      </div>
+      <div class="value-item">
+        <h3>LONGEVITY</h3>
+        <p>We reject fast fashion categorically. A MURS piece should be in your wardrobe for a decade, not a season. Timeless by design.</p>
+      </div>
+      <div class="value-item">
+        <h3>IDENTITY</h3>
+        <p>MURS is African luxury for the world. We carry our heritage with pride — not as costume, but as confidence woven into every thread.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="editorial-strip">
+    <div class="editorial-text">
+      <p class="editorial-quote">"We dress the version of you that always knew."</p>
+      <span class="editorial-attr">— MURS ATELIER</span>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">MURS</span>
+        <p>Luxury fashion, redefined.<br>Johannesburg · Paris · New York</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>contact@murs.com</p>
+        <p>+33 1 42 65 00 00</p>
+        <div class="footer-social">
+          <a href="#">IG</a><a href="#">TW</a><a href="#">PI</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MURS. All rights reserved.</p></div>
+  </footer>
+
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>YOUR CART</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>TOTAL</span>
+        <span id="cartTotal">R 0</span>
+      </div>
+      <a href="checkout.html" class="btn-primary" style="display:block;text-align:center;margin-top:1rem;">CHECKOUT</a>
+    </div>
+  </div>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
